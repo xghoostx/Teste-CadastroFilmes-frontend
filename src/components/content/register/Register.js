@@ -35,7 +35,7 @@ export default class UserCrud extends Component {
 
     getUpdatedList(filme, add = true) {
         const lista = this.state.lista.filter(u => u.id !== filme.id);
-        if (add) filme.unshift(filme);
+        if (add) lista.unshift(filme);
         return lista;
     }
 
