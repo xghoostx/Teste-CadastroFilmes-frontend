@@ -1,0 +1,39 @@
+:root {
+    --header-height: 56px;
+    --aside-width: 225px;
+    --footer-height: 80px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Layout em Grid */
+.app {
+    margin: 0px;
+    display: grid;
+    grid-template-rows:
+        var(--header-height)
+        1fr
+        var(--footer-height);
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    height: 100vh;
+    background-color: #fafafa;
+
+}
+
+header.header {
+    grid-area: header;
+}
+
+main.content {
+    grid-area: content;
+}
+
+footer.footer {
+    grid-area: footer;
+}
+
