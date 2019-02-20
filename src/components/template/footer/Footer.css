@@ -10,3 +10,10 @@ footer.footer{
 .social{
     margin:5px;
 }
+.social a{
+    color: #323232;
+}
+.social a:hover{
+    color:#d50000;
+    transition-delay: 0.15s;
+}

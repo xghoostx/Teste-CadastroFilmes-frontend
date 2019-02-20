@@ -9,6 +9,12 @@ const initialState = {
     lista: []
 }
 
+const headerProps = {
+    icon: 'film',
+    title: 'Cadastro',
+    subtitle: 'Cadastro de Filmes: Incluir, Listar, Alterar e Excluir!'
+}
+
 export default class UserCrud extends Component {
 
     state = { ...initialState };
@@ -157,7 +163,7 @@ export default class UserCrud extends Component {
 
     render() {
         return (
-            <Main icon="film" title="Cadastro">
+            <Main {...headerProps}>
                 <div>
                     {this.renderForm()}
                     {this.renderTable()}

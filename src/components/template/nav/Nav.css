@@ -13,7 +13,7 @@ aside.menu-area{
     display: block;
 }
 .menu a:hover{
-    background: linear-gradient(135deg, #07a7e3, #32dac3 100%);
+    background: linear-gradient(135deg, #f50057  , #6200ea   100%);
 }
 
 
