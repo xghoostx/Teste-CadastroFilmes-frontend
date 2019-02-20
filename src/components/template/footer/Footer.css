@@ -1,10 +1,10 @@
 footer.footer{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 0 25px;
-    background: black;
-    color:#ddd;
+    background: #fff;
+    color: #263238;
     box-shadow: var(--shadow);
     overflow: hidden;
     white-space: nowrap;

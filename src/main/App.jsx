@@ -3,22 +3,22 @@ import { BrowserRouter } from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
+import Logo from '../components/template/logo/Logo';
 import Header from '../components/template/header/Header';
+import Nav from '../components/template/nav/Nav';
 import Footer from '../components/template/footer/Footer';
-import Routes from './routes';
+import Route from '../main/routes';
 
-const App = () => (
+
+export default props =>
     <BrowserRouter>
         <div className="app">
+            <Logo />
             <Header />
-            <Routes />
+            <Nav />
+            <Route />
             <Footer />
         </div>
     </BrowserRouter>
-);
-
-export default App;
-
-
 
 

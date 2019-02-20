@@ -1,14 +1,13 @@
 import React from 'react';
 import { Switch, Route, Redirect} from 'react-router';
-import Search from '../components/content/search/Search';
+import Home from '../components/content/home/Home';
 import Register from '../components/content/register/Register';
 
-const Routes = () => (
+export default props =>
         <Switch> 
-            <Route exact path="/" component={Search} />
+            <Route exact path="/" component={Home} />
             <Route path="/register" component={Register} />
             <Redirect from="*" to="/"/>
-        </Switch>
-);
+        </Switch>    
 
-export default Routes;
+

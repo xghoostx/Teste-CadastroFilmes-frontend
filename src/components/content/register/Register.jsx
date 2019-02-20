@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import axios from '../../../services/api';
+import Main from '../../template/main/Main';
 
 
 const baseUrl = 'http://localhost:3333/filmes'
 const initialState = {
-    filme: { nome: '', descricao: '', url:'' },
+    filme: { nome: '', descricao: '', url: '' },
     lista: []
 }
 
@@ -49,7 +50,7 @@ export default class UserCrud extends Component {
         return (
             <div className="form">
                 <div className="row">
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-md-4">
                         <div className="form-group">
                             <label>Nome</label>
                             <input type="text" className="form-control"
@@ -60,7 +61,7 @@ export default class UserCrud extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-md-4">
                         <div className="form-group">
                             <label>Descrição</label>
                             <textarea type="textarea" className="form-control"
@@ -73,7 +74,7 @@ export default class UserCrud extends Component {
                 </div>
 
                 <div className="row">
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-md-4">
                         <div className="form-group">
                             <label>url</label>
                             <input type="text" className="form-control"
@@ -156,10 +157,12 @@ export default class UserCrud extends Component {
 
     render() {
         return (
-            <div>
-                {this.renderForm()}
-                {this.renderTable()}
-            </div>
+            <Main icon="film" title="Cadastro">
+                <div>
+                    {this.renderForm()}
+                    {this.renderTable()}
+                </div>
+            </Main>    
         );
     }
 }
