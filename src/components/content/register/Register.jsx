@@ -93,17 +93,17 @@ export default class UserCrud extends Component {
                     <hr />
                 </div >
                 <div className="row">
-                        <div className="col-12 d-flex justify-content-end">
-                            <button className="btn btn-primary"
-                                onClick={e => this.save(e)}>
-                                Salvar
+                    <div className="col-12 d-flex justify-content-end">
+                        <button className="btn btn-primary"
+                            onClick={e => this.save(e)}>
+                            Salvar
                             </button>
-                            <button className="btn btn-secondary ml-2"
-                                onClick={e => this.clear(e)}>
-                                Cancelar
-                            </button>
-                        </div>
+                        <button className="btn btn-secondary ml-2"
+                            onClick={e => this.clear(e)}>
+                            Cancelar
+                        </button>
                     </div>
+                </div>
             </div >
         );
     }
@@ -119,42 +119,40 @@ export default class UserCrud extends Component {
         });
     }
 
-    renderTable() {
-        return (
-            <table className="table mt-4">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Descrição</th>
-                        <th>Url</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {this.renderRows()}
-                </tbody>
-            </table>
-        );
-    }
-
-    renderRows() {
+    renderList() {
         return this.state.lista.map(filme => {
             return (
-                <tr key={filme.id}>
-                    <td>{filme.nome}</td>
-                    <td>{filme.descricao}</td>
-                    <td><a href={`${filme.url}`} target="blank"> {filme.url}</a></td>
-                    <td>
-                        <button className="btn btn-warning"
-                            onClick={() => this.load(filme)}>
-                            <i className="fa fa-pencil"></i>
-                        </button>
-                        <button className="btn btn-danger ml-2"
-                            onClick={() => this.remove(filme)}>
-                            <i className="fa fa-trash"></i>
-                        </button>
-                    </td>
-                </tr>
+                <table class="table mt-4">
+                    <tbody>
+                        <tr key={filme.id}>
+                            <th> Nome: </th>
+                            <td> {filme.nome} </td>
+                        </tr>
+                        <tr key={filme.id}>
+                            <th> Descrição: </th>
+                            <td> {filme.descricao} </td>
+                        </tr>
+                        <tr key={filme.id}>
+                            <th> Url: </th>
+                            <td> <a href={`${filme.url}`} target="blank"> {filme.url}</a> </td>
+                        </tr>
+                        <tr key={filme.id}>
+                            <th>  </th>
+                            <td>
+                                <div className="col-12 d-flex justify-content-end">
+                                    <button className="btn btn-warning"
+                                        onClick={() => this.load(filme)}>
+                                        <i className="fa fa-pencil"></i>
+                                    </button>
+                                    <button className="btn btn-danger ml-2"
+                                        onClick={() => this.remove(filme)}>
+                                        <i className="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             );
         });
     }
@@ -162,11 +160,11 @@ export default class UserCrud extends Component {
     render() {
         return (
             <Main {...headerProps}>
-                <div>
+                <div>  
                     {this.renderForm()}
-                    {this.renderTable()}
+                    {this.renderList()}
                 </div>
-            </Main>
+            </Main >
         );
     }
 }
