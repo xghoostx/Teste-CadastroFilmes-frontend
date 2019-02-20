@@ -54,9 +54,11 @@ export default class UserCrud extends Component {
 
     renderForm() {
         return (
+
             <div className="form">
-                <div className="row">
-                    <div className="col-12 col-md-4">
+
+                <div class="row">
+                    <div class="col-sm">
                         <div className="form-group">
                             <label>Nome</label>
                             <input type="text" className="form-control"
@@ -66,8 +68,7 @@ export default class UserCrud extends Component {
                                 placeholder="Digite o nome..." />
                         </div>
                     </div>
-
-                    <div className="col-12 col-md-4">
+                    <div class="col-sm">
                         <div className="form-group">
                             <label>Descrição</label>
                             <textarea type="textarea" className="form-control"
@@ -77,10 +78,7 @@ export default class UserCrud extends Component {
                                 placeholder="Digite a descrição..." />
                         </div>
                     </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-12 col-md-4">
+                    <div class="col-sm">
                         <div className="form-group">
                             <label>url</label>
                             <input type="text" className="form-control"
@@ -91,22 +89,22 @@ export default class UserCrud extends Component {
                         </div>
                     </div>
 
+
                     <hr />
-                    <div className="row">
+                </div >
+                <div className="row">
                         <div className="col-12 d-flex justify-content-end">
                             <button className="btn btn-primary"
                                 onClick={e => this.save(e)}>
                                 Salvar
-                        </button>
-
+                            </button>
                             <button className="btn btn-secondary ml-2"
                                 onClick={e => this.clear(e)}>
                                 Cancelar
-                        </button>
+                            </button>
                         </div>
                     </div>
-                </div>
-            </div>
+            </div >
         );
     }
 
@@ -168,7 +166,7 @@ export default class UserCrud extends Component {
                     {this.renderForm()}
                     {this.renderTable()}
                 </div>
-            </Main>    
+            </Main>
         );
     }
 }
