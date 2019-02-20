@@ -3,9 +3,10 @@ footer.footer{
     align-items: center;
     justify-content: flex-end;
     padding: 0 25px;
-    background: #fff;
-    color: #263238;
+    background-color: #fff;
     box-shadow: var(--shadow);
-    overflow: hidden;
-    white-space: nowrap;
+}
+
+.social{
+    margin:5px;
 }
