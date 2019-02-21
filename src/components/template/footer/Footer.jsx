@@ -4,7 +4,7 @@ import './Footer.css';
 export default props =>
     <footer className="footer">
         <h6>
-            Sistema desenvolvido por <strong> xghoostx </strong>
+            Sistema desenvolvido por <strong className="social"> xghoostx </strong>
         </h6>
         <h3>
             <spam className="social">

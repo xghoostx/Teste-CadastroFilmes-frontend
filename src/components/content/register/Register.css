@@ -1,0 +1,18 @@
+.btn.test{
+    background-color: #7e57c2;
+    color:#fff;
+}
+.btn.test:hover{
+    background-color: #5e35b1 ;
+    transition-delay: 0.1s;
+}
+img#img{
+    height: 150px;
+}
+a{
+    color:#7c4dff;
+}
+a:hover{
+    color:#6200ea;
+    text-decoration: none;
+}
